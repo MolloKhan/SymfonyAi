@@ -149,7 +149,7 @@ class Store implements ManagedStoreInterface, StoreInterface
         unset($data['_metadata']['_id']);
 
         return new VectorDocument(
-            id: Uuid::fromString($id),
+            id: $id,
             vector: $vector,
             metadata: new Metadata($data['_metadata']),
         );
